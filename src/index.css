@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Face */
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('./assets/fonts/NeueHaasDisplayMedium.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('./assets/fonts/NeueHaasDisplayRoman.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        padding: 0px;
+    }
+
+    body {
+        @apply bg-light-200 font-neueHaas;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    button,
+    a,
+    span {
+        @apply font-neueHaas
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #121212;
+        border-radius: 50px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+
+}
+
+@layer utilities {
+
+    .h1-semibold {
+        @apply text-[22px] font-semibold leading-[22px];
+    }
+
+    .h2-semibold {
+        @apply text-[18px] font-semibold leading-[18px];
+    }
+
+    .h2-medium {
+        @apply text-[18px] font-medium leading-[18px];
+    }
+
+    .h3-medium {
+        @apply text-[14px] font-medium leading-[14px];
+    }
+
+    .body-medium {
+        @apply text-[16px] font-medium leading-[16px];
+    }
+    .body-semibold {
+        @apply text-[16px] font-semibold leading-[16px];
+    }
+
+    .paragraph-medium {
+        @apply text-[14px] font-medium leading-[18px];
+    }
+
+    .subtle-medium {
+        @apply text-[12px] font-medium leading-[12px];
+    }
+
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .flex-between {
+        @apply flex items-center justify-between;
+    }
+
+    .flex-start {
+        @apply flex items-center justify-start;
+    }
+
+    .flex-end {
+        @apply flex items-center justify-end;
+    }
+}
